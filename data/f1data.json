@@ -1,0 +1,107 @@
+[
+    {
+        "Name": "Verstappen",
+        "Description": "hes very fast dudududu max verstappen 33",
+        "Rating": 1
+    },
+    {
+        "Name": "Perez",
+        "Description": "mexican that fell off hard bro cant get to q2",
+        "Rating": -0.95
+    },
+    {
+        "Name": "Norris",
+        "Description": "everyone loves lando norris",
+        "Rating": 0.4
+    },
+    {
+        "Name": "Piastri",
+        "Description": "mclaren hates this guy for some reason",
+        "Rating": 0.1
+    },
+    {
+        "Name": "Sainz",
+        "Description": "got his appendix removed and then promptly came back to win a race",
+        "Rating": -0.5
+    },
+    {
+        "Name": "Leclerc",
+        "Description": "used up all of his luck back in monaco",
+        "Rating": 0.751
+    },
+    {
+        "Name": "Hulkenburg",
+        "Description": "I usuaslly forget that this guy exists",
+        "Rating": 0.224
+    },
+    {
+        "Name": "Magnesseun",
+        "Description": "we all love kmag bro makes that haas work",
+        "Rating": -0.64
+    },
+    {
+        "Name": "Tsunoda",
+        "Description": "somehow does something with that shitbox vcarb",
+        "Rating": 0.99
+    },
+    {
+        "Name": "Zhou",
+        "Description": "funny guy with even funnier ability to score points",
+        "Rating": -0.8434
+    },
+    {
+        "Name": "Bottas",
+        "Description": "bot ass",
+        "Rating": -0.45
+    },
+    {
+        "Name": "Riccardo",
+        "Description": "everyone also loves daniel riccardo but hes not as good",
+        "Rating": 0.32
+    },
+    {
+        "Name": "Hamilton",
+        "Description": "old blood falling off as well, nvm hes won twice in a row",
+        "Rating": 0.11
+    },
+    {
+        "Name": "Russel",
+        "Description": "hes there and he does good sometimes, dqed from spa",
+        "Rating": -0.68
+    },
+    {
+        "Name": "Alonso",
+        "Description": "another old blood falling off ever harder than hamilton",
+        "Rating": -0.42
+    },
+    {
+        "Name": "Stroll",
+        "Description": "nobody loves this bum ass nepo baby",
+        "Rating": 0.55
+    },
+    {
+        "Name": "Sargeant",
+        "Description": "WHAT THE FUCK IS A KILOMETER",
+        "Rating": 0.71
+    },
+    {
+        "Name": "Albon",
+        "Description": "Gets some points every once in a while",
+        "Rating": 0.63
+    },
+    {
+        "Name": "Bearman",
+        "Description": "F2 driver comes in for one race and is still higher in the rankings than some F1 drivers",
+        "Rating": 0.45
+    },
+    {
+        "Name": "Gasly",
+        "Description": "alpine is kinda there ig",
+        "Rating": -0.12
+    },
+    {
+        "Name": "Ocon",
+        "Description": "5 second penalty for ocon",
+        "Rating": -0.82
+    }
+]
