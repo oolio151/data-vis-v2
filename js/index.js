@@ -6,12 +6,14 @@ const pointColor = '#000';
 let data = [];
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth*0.9;
-    canvas.height = window.innerHeight*0.9;
+    canvas.width = window.innerWidth*0.8;
+    canvas.height = window.innerHeight*0.8;
 }
 
 function getXValue(rating) {
-    return (rating + 1) * (canvas.width / 2); 
+    const padding = 50; // Padding to keep points within the canvas bounds
+    const scale = (canvas.width - 2 * padding) / 2;
+    return (rating + 1) * scale + padding; 
 }
 
 function getRandomYValue() {
@@ -66,8 +68,13 @@ canvas.addEventListener('click', (event) => {
 
 //testing stuff
 function pointClicked(point) {
-    alert(`You clicked on ${point.Name}: ${point.Description}`);
+    document.getElementById("title-text").innerHTML = point.Name;
+    document.getElementById("description-text").innerHTML = point.Description;
 }
+
+canvas.addEventListener('hover', (event) => {
+    console.log("hovering");
+})
 
 function loadData() {
     const filePath = "../data/f1data.json";
@@ -96,7 +103,10 @@ function draw() {
     drawPoints();
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', createStuff);
+window.addEventListener('resize', createStuff);
+
+function createStuff(){
     resizeCanvas();
     loadData();
-});
+}
