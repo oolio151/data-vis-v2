@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-const pointColor = '#000';
-
+const pointColor = '#2f2f2f';
+const outlineColor = 'ff0000'
 let data = [];
 
 function resizeCanvas() {
@@ -40,13 +40,21 @@ function drawPoints() {
     data.forEach(point => {
         const x = getXValue(point.Rating);
         const y = getRandomYValue();
-        point.drawX = x; 
-        point.drawY = y; 
-        ctx.fillStyle = pointColor;
-        ctx.beginPath();
-        ctx.arc(x, y, 10, 0, Math.PI * 2, true); 
-        ctx.fill();
+        point.drawX = x; // Store x position for click detection
+        point.drawY = y; // Store y position for click detection
+        drawPoint(point);
     });
+}
+
+// Draw a single point with outline
+function drawPoint(point) {
+    ctx.fillStyle = pointColor;
+    ctx.beginPath();
+    ctx.arc(point.drawX, point.drawY, 10, 0, Math.PI * 2, true);
+    ctx.fill();
+    ctx.strokeStyle = outlineColor;
+    ctx.lineWidth = 2;
+    ctx.stroke();
 }
 
 function isPointClicked(x, y, point) {
@@ -66,11 +74,16 @@ canvas.addEventListener('click', (event) => {
     });
 });
 
-//testing stuff
+
+//======================================
+//use this to interact with other things
+//==like when connecting to other code==
+//======================================
 function pointClicked(point) {
     document.getElementById("title-text").innerHTML = point.Name;
     document.getElementById("description-text").innerHTML = point.Description;
 }
+
 
 canvas.addEventListener('hover', (event) => {
     console.log("hovering");
