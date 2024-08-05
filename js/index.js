@@ -11,7 +11,7 @@ function resizeCanvas() {
 }
 
 function getXValue(rating) {
-    const padding = 50; // Padding to keep points within the canvas bounds
+    const padding = 50; 
     const scale = (canvas.width - 2 * padding) / 2;
     return (rating + 1) * scale + padding; 
 }
@@ -40,13 +40,13 @@ function drawPoints() {
     data.forEach(point => {
         const x = getXValue(point.Rating);
         const y = getRandomYValue();
-        point.drawX = x; // Store x position for click detection
-        point.drawY = y; // Store y position for click detection
+        point.drawX = x;
+        point.drawY = y;
         drawPoint(point);
     });
 }
 
-// Draw a single point with outline
+
 function drawPoint(point) {
     ctx.fillStyle = pointColor;
     ctx.beginPath();
