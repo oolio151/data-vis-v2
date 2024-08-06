@@ -1,7 +1,7 @@
 /*
-to do
+to do as of 8/6
 - change dot colors
-- add labels
+- add labels, supportiveness scale rather than a poltiical scale (highly supp, mod oppo, stuff like that)
 - black to blue to white to red to black
 */
 
