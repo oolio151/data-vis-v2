@@ -1,7 +1,14 @@
+/*
+to do
+- change dot colors
+- add labels
+- black to blue to white to red to black
+*/
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-const pointColor = '#2f2f2f';
+const pointColor = '#afafaf';
 const outlineColor = 'ff0000'
 let data = [];
 
@@ -52,9 +59,9 @@ function drawPoint(point) {
     ctx.beginPath();
     ctx.arc(point.drawX, point.drawY, 10, 0, Math.PI * 2, true);
     ctx.fill();
-    ctx.strokeStyle = outlineColor;
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    //ctx.strokeStyle = outlineColor;
+    //ctx.lineWidth = 2;
+    //ctx.stroke();
 }
 
 function isPointClicked(x, y, point) {
@@ -80,8 +87,13 @@ canvas.addEventListener('click', (event) => {
 //==like when connecting to other code==
 //======================================
 function pointClicked(point) {
-    document.getElementById("title-text").innerHTML = point.Name;
-    document.getElementById("description-text").innerHTML = point.Description;
+    var name = point.Name;
+    var description = point.Description;
+    var rating = point.Rating;
+    document.getElementById("title-text").innerHTML = name;
+    document.getElementById("description-text").innerHTML = description;
+
+    return [name, description, rating];
 }
 
 
