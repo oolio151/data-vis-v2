@@ -1,9 +1,3 @@
-/*
-to do as of 8/6
-- change dot colors
-- add labels, supportiveness scale rather than a poltiical scale (highly supp, mod oppo, stuff like that)
-- black to blue to white to red to black
-*/
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -11,6 +5,14 @@ const ctx = canvas.getContext('2d');
 const pointColor = '#afafaf';
 const outlineColor = 'ff0000'
 let data = [];
+
+const xAxisLabels = [
+    { label: 'Highly Supportive', position: -0.95},
+    { label: 'Moderately Supportive', position: -0.5},
+    { label: 'Moderate', position: 0 },
+    { label: 'Moderately Oppositive', position: 0.5 },
+    { label: 'Highly Oppositive', position: 0.95}
+];
 
 function resizeCanvas() {
     canvas.width = window.innerWidth*0.8;
@@ -24,16 +26,31 @@ function getXValue(rating) {
 }
 
 function getRandomYValue() {
-    return Math.random() * (canvas.height - 20) + 10;
+    return Math.random() * (canvas.height - 40) + 10;
 }
 
 function drawGradientXAxis() {
     const gradient = ctx.createLinearGradient(50, 0, canvas.width - 50, 0);
-    gradient.addColorStop(0, 'blue');
-    gradient.addColorStop(1, 'red');
+    //gradient.addColorStop(0, 'blue');
+    //gradient.addColorStop(1, 'red');
+    gradient.addColorStop(0, 'black');
+    gradient.addColorStop(0.25, 'blue');
+    gradient.addColorStop(0.5, 'white');
+    gradient.addColorStop(0.75, 'red');
+    gradient.addColorStop(1, 'black');
 
     ctx.fillStyle = gradient;
-    ctx.fillRect(50, canvas.height - 20, canvas.width - 100, 10);
+    ctx.fillRect(50, canvas.height - 30, canvas.width - 100, 10);
+}
+
+function drawXAxisLabels() {
+    ctx.fillStyle = 'white';
+    ctx.font = '14px Arial';
+    ctx.textAlign = 'center';
+
+    xAxisLabels.forEach(labelObj => {
+        ctx.fillText(labelObj.label, getXValue(labelObj.position), canvas.height - 5);
+    });
 }
 
 function drawYAxis() {
@@ -90,6 +107,17 @@ function pointClicked(point) {
     var name = point.Name;
     var description = point.Description;
     var rating = point.Rating;
+
+    const eventData = {
+        "name": name,
+        "description": description,
+        "rating": rating
+    }
+
+    const sendableEvent = new CustomEvent('pointClicked', {detail : eventData});
+    document.dispatchEvent(sendableEvent);
+    
+
     document.getElementById("title-text").innerHTML = name;
     document.getElementById("description-text").innerHTML = description;
 
@@ -117,7 +145,7 @@ function loadData() {
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
-            alert("Something has gone wrong. Please try again later or contact the developers.");
+            //alert("Something has gone wrong. Please try again later or contact the developers.");
         });
 }
 
@@ -125,6 +153,7 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); 
     drawYAxis();
     drawGradientXAxis();
+    drawXAxisLabels();
     drawPoints();
 }
 
