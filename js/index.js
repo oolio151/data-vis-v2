@@ -98,11 +98,7 @@ canvas.addEventListener('click', (event) => {
     });
 });
 
-
-//======================================
-//use this to interact with other things
-//==like when connecting to other code==
-//======================================
+//changes the html header stuff and also sends out an event
 function pointClicked(point) {
     var name = point.Name;
     var description = point.Description;
@@ -116,7 +112,7 @@ function pointClicked(point) {
 
     const sendableEvent = new CustomEvent('pointClicked', {detail : eventData});
     document.dispatchEvent(sendableEvent);
-    
+
 
     document.getElementById("title-text").innerHTML = name;
     document.getElementById("description-text").innerHTML = description;
