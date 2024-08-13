@@ -126,7 +126,7 @@ canvas.addEventListener('hover', (event) => {
 })
 
 function loadData() {
-    const filePath = "../data/f1data.json";
+    const filePath = "../data/test.json";
 
     fetch(filePath)
         .then(response => {

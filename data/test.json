@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "Abortion",
+        "Description": "The death rate for legal abortions is 0.7 deaths for every 100,000 abortions. By contrast, there are one to two deaths per 100,000 plastic surgery procedures, three deaths for every 100,000 colonoscopies, and three to six deaths per 100,000 tonsillectomies. Childbirth has nine deaths per 100,000 deliveries.",
+        "Rating": -0.75
+    },
+    {
+        "Name": "Abortion",
+        "Description": "Ectopic pregnancies occur when a fertilized egg implants somewhere other than the uterine cavity. About one in 50 pregnancies are ectopic, and they are nonviable. Bleeding from ectopic pregnancies caused 10% of all pregnancy-related deaths, and ectopic pregnancies were the leading cause of maternal death in the first trimester.",
+        "Rating": -0.9
+    },
+    {
+        "Name": "Abortion",
+        "Description": "Conception is the moment a sperm cell fertilizes an egg cell, which begins the process of cell division that creates a human.",
+        "Rating": 0.6
+    },
+    {
+        "Name": "Abortion",
+        "Description": "Echoing a 2014 remark by Pope Francis that connected abortion to “throwaway culture,” Cardinal Joseph Tobin of Newark, New Jersey, stated, “abortion represents a failure to recognize the sanctity of human life and promotes a culture in which human life in its most vulnerable moment is perceived as disposable. Such a proposal targets poor women as needing an expedient solution to a complex problem.”",
+        "Rating": 0.95
+    },
+    {
+        "Name": "Concealed Carry",
+        "Description": "Constitutional carry empowers law-abiding gun owners to protect themselves and others from criminals. Even though states disallow felons and other criminals from possessing firearms, criminals obviously aren’t keen on following the law. Constitutional carry means criminals have no idea who in their vicinity might be carrying a concealed gun, which increases the danger for the criminal. What might have been a simple robbery at an ATM after dark in a no-issue state, could turn fatal for the robber in a constitutional carry state.",
+        "Rating": -0.8
+    },
+    {
+        "Name": "Concealed Carry",
+        "Description": "The Second Amendment protects “the right of the people to keep and bear Arms.” The Amendment clearly states that the right “shall not be infringed.”",
+        "Rating": -0.3
+    },
+    {
+        "Name": "Concealed Carry",
+        "Description": "The Second Amendment does not guarantee “the right to keep or bear arms” for individuals. The amendment guarantees the right of a state militia to keep and bear arms.",
+        "Rating": 0.3
+    },
+    {
+        "Name": "Concealed Carry",
+        "Description": "Constitutional carry eliminates training, background checks, and other safety measures. Some lower the age to carry guns from 21 to 18.",
+        "Rating": 0.55
+    },
+    {
+        "Name": "Weed",
+        "Description": "Medical marijuana is most commonly used for pain in the US. “While marijuana isn’t strong enough for severe pain (for example, post-surgical pain or a broken bone), it is quite effective for the chronic pain that plagues millions of Americans, especially as they age,” explains primary care physician and cannabis specialist, Peter Grinspoon.",
+        "Rating": -0.83
+    },
+    {
+        "Name": "Weed",
+        "Description": "“An ‘unintended consequence’ of marijuana legalization is the impact on the pediatric population. From prenatal exposure to unintentional childhood exposures, through concerns of adolescence abuse and marijuana use for medicinal indications in children, marijuana exposure can affect pediatric patients at every stage in childhood. Regardless of the stage or reason of exposure, concerns exist about short-term and long-term consequences in a child’s physical and mental health,” argues Sam Wang, Associate Professor of Pediatrics-Emergency Medicine at the University of Colorado School of Medicine.",
+        "Rating": 0.63
+    },
+    {
+        "Name": "Weed",
+        "Description": "Many patients prefer marijuana for pain because it is less addictive and carries less risk of overdose than opiates.",
+        "Rating": -0.42
+    },
+    {
+        "Name": "Weed",
+        "Description": "The National Institutes of Health offers a litany of negative mental side effects, including “altered senses (for example, seeing brighter colors), altered sense of time, changes in mood, impaired body movement, difficulty with thinking and problem-solving, impaired memory, hallucinations (when taken in high doses), delusions (when taken in high doses), [and] psychosis (risk is highest with regular use of high potency marijuana).",
+        "Rating": 1
+    }
+]
